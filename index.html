@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poostologhy - ارتباط با ما</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body, html { margin:0; padding:0; height:100%; font-family:'Vazirmatn',sans-serif; overflow:hidden; }
+    .background { 
+      position:absolute; width:100%; height:100%; 
+      background: linear-gradient(-45deg, #0b3319, #14532d, #1a3b23, #2e6643); 
+      background-size:400% 400%; 
+      animation:gradientMove 12s ease infinite; 
+      z-index:-1; 
+    }
+    @keyframes gradientMove { 
+      0%{background-position:0% 50%} 
+      50%{background-position:100% 50%} 
+      100%{background-position:0% 50%} 
+    }
+    .wrapper { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#fff; animation:fadeIn 1s ease-in-out; }
+    @keyframes fadeIn { from{opacity:0}to{opacity:1} }
+    .logo-box { animation:slideDown 1.2s ease-out; }
+    @keyframes slideDown { from{transform:translateY(-50px); opacity:0}to{transform:translateY(0); opacity:1} }
+    .logo { width:120px; height:120px; border-radius:50%; box-shadow:0 0 25px rgba(0,128,64,0.6); }
+    .brand { font-size:1.8rem; margin:15px 0 5px; text-shadow:0 0 12px rgba(0,200,100,0.9); font-weight:700; }
+    .subtitle { color:#d9fbe6; margin-bottom:20px; font-size:1rem; }
+    
+    /* دکمه‌ها عمودی و کوچک‌تر */
+    .buttons { 
+      display:flex; 
+      flex-direction:column; 
+      gap:10px; 
+      width:180px; 
+      animation:slideUp 1.3s ease-out; 
+    }
+    @keyframes slideUp { from{transform:translateY(50px); opacity:0}to{transform:translateY(0); opacity:1} }
+    
+    .btn { 
+      display:flex; justify-content:center; align-items:center; gap:8px; 
+      padding:10px; 
+      border-radius:10px; 
+      font-size:0.9rem; 
+      font-weight:bold; 
+      text-decoration:none; 
+      color:#fff; 
+      position:relative; 
+      overflow:hidden; 
+      transition:transform .3s ease, box-shadow .3s ease; 
+    }
+    .btn::before { 
+      content:""; position:absolute; inset:0; 
+      background:linear-gradient(45deg,rgba(255,255,255,0.2),transparent); 
+      transform:translateX(-100%); 
+      transition:transform .5s; 
+      z-index:1; 
+    }
+    .btn:hover::before { transform:translateX(100%); }
+    .btn:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 0 15px rgba(255,255,255,0.2); }
+    .btn img { width:20px; height:20px; object-fit:contain; z-index:2; }
+    .btn span { position:relative; z-index:2; }
+    
+    /* رنگ‌بندی سبز */
+    .whatsapp { background:linear-gradient(135deg,#25d366,#128c7e); }
+    .telegram { background:linear-gradient(135deg,#2a9d8f,#14532d); }
+    .rubika { background:linear-gradient(135deg,#4caf50,#1a3b23); }
+    .eitaa { background:linear-gradient(135deg,#81c784,#14532d); }
+
+    footer { margin-top:30px; font-size:0.9rem; font-weight:bold; color:#e0ffe7; animation:fadeIn 1.8s ease; }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <main class="wrapper">
+    <div class="logo-box">
+      <img src="logo.png" alt="لوگوی Poostologhy" class="logo">
+      <h1 class="brand">ارتباط با ما</h1>
+      <p class="subtitle">از طریق شبکه‌های اجتماعی با ما در تماس باشید</p>
+    </div>
+
+    <div class="buttons">
+      <a href="https://wa.me/989965190104" target="_blank" class="btn whatsapp">
+        <img src="whatsapp-logo.png" alt="واتساپ"> <span>واتساپ</span>
+      </a>
+      <a href="https://t.me/989965190104" target="_blank" class="btn telegram">
+        <img src="telegram-logo.png" alt="تلگرام"> <span>تلگرام</span>
+      </a>
+      <a href="https://rubika.ir/989965190104" target="_blank" class="btn rubika">
+        <img src="rubika-logo.png" alt="روبیکا"> <span>روبیکا</span>
+      </a>
+      <a href="https://eitaa.com/989965190104" target="_blank" class="btn eitaa">
+        <img src="eitaa-logo.png" alt="ایتا"> <span>ایتا</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>Poostologhy | جایی که زیبایی و طبیعت یکی می‌شوند 🌱</p>
+    </footer>
+  </main>
+</body>
+</html>
